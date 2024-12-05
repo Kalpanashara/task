@@ -1,0 +1,835 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700/Lora:400');
+@import url('fonts/font-awesome/css/font-awesome.css');
+@import url('fonts/ionicons/css/ionicon.css');
+
+@import url('bootstrap.css');
+@import url('menu.css');
+@import url('owl.carousel.css');
+@import url('owl.theme.default.css');
+@import url('animate.css');
+
+@font-face {
+    font-family: 'GT Walsheim Bold';
+    src: url('fonts/GT Walsheim Bold.otf');
+}
+@font-face {
+    font-family: 'GT Walsheim Medium';
+    src: url('fonts/GT Walsheim Medium.ttf');
+}
+@font-face {
+    font-family: 'GT Walsheim Regular';
+    src: url('fonts/GT Walsheim Regular.ttf');
+}
+
+/*---------- Reset ---------*/
+*{
+    margin:0;
+    text-decoration:none
+  }
+  html{
+      height: 100%;
+      width: 100%;
+      overflow-x: hidden; 
+  }
+  body {
+      font-family: 'Roboto', sans-serif;
+      font-size: 16px;
+      line-height: 28px;
+      overflow-x: hidden;
+      color: #1e2846;
+  }
+  a,i,.btn,p, ul, li,:before,:after {
+      -webkit-transition: all .08s;
+      -moz-transition: all .08s;
+      -o-transition: all .08s;
+      transition: all .08s;
+  }
+  a:hover,a:focus,i:hover,p:hover, ul:hover, li:hover, :hover:before, :hover:after {
+      text-decoration: none;
+      outline: none;
+      -webkit-transition: all .08s;
+      -moz-transition: all .08s;
+      -o-transition: all .08s;
+      transition: all .08s;
+  }
+  a{
+      color: #1e2846;
+  }
+  a:hover{
+      color: #ff5530;
+  }
+  @media (min-width: 1200px){
+    .container {
+        max-width: 1170px;
+    }
+  }
+  h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+      font-family: 'GT Walsheim Bold';
+  }
+  p{
+    margin-bottom: 0px;
+  }
+  @media screen and (max-width: 991px){
+      p{
+          font-size: 15px;
+      }
+  }
+
+  .clearfix{
+    clear: both;
+  }
+  .divider{
+    margin: 30px 0px;
+    display: inline-block;
+  }
+  section{
+      padding-top: 110px;
+      padding-bottom: 110px;
+  }
+  section.inner-page{
+      padding-top: 85px;
+  }
+  table {
+      margin-bottom: 10px;
+      border: 1px solid #eee;
+  }
+  table td, table th {
+      padding: 3px 10px;
+      border-bottom: 1px solid #eee;
+      border-right: 1px solid #eee;
+  }
+  img{
+      max-width: 100%;
+  }
+  .section-title{
+      text-align: center;
+      margin-bottom: 70px;
+  }
+  .section-title h2{
+      font-size: 46px;
+      line-height: 40px;
+      letter-spacing: -1px;
+      margin-bottom: 25px;
+  }
+  .section-title p{
+      font-size: 14px;
+      line-height: 28px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+  }
+  .about .section-title{
+      text-align: left;
+      margin-bottom: 40px;
+      padding-top: 0px;
+  }
+  .about .section-title h2{
+      margin-bottom: 15px;
+  }
+  @media screen and (max-width: 991px) {
+      .section-title{
+          margin-bottom: 55px;
+      }
+      .section-title h2 {
+          font-size: 36px;
+          line-height: 30px;
+          margin-bottom: 20px;
+      }
+      .section-title p {
+          font-size: 12px;
+          line-height: 24px;
+      }
+  }
+  ::-webkit-input-placeholder { 
+      color: #a2a9dc;
+  }
+  ::-moz-placeholder { 
+      color: #a2a9dc;
+  }
+  :-ms-input-placeholder { 
+      color: #a2a9dc;
+  }
+  :-moz-placeholder { 
+      color: #a2a9dc;
+  }
+  :placeholder { 
+      color: #a2a9dc;
+  }
+
+
+/*---------- Slider Section ------------*/
+#slider{
+    position: relative;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background-position: center;
+    background-size: cover;
+}
+.section-shape img{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+.slider{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    max-height: 100%;
+    background-size: cover;
+
+}
+.slider:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(11, 0, 39, 0.80);
+}
+.slider_2 .slider:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.68);
+}  
+
+.typed-strings{
+    display: none;
+}
+.typed-cursor {
+    opacity: 1;
+    -webkit-animation: blink 0.7s infinite;
+    -moz-animation: blink 0.7s infinite;
+    animation: blink 0.7s infinite;
+}
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+.slide-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.slide-content{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    z-index: 2;
+}
+.slide-content .sub_heading{
+    font-family: 'GT Walsheim Regular';
+    line-height: 28px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 12px;
+}
+.slide-content .heading{
+    color: #fff;
+    font-size: 80px;
+    line-height: 90px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    margin-bottom: 0;
+}
+.scroll_btn a{
+    position: absolute;
+    left: 48.3%;
+    top: 75%;
+    z-index: 999;
+    width: 45px;
+    height: 70px;
+    text-align: center;
+    font-size: 24px;
+    line-height: 70px;
+    border: 1px solid #fff;
+    border-radius: 30px;
+    color: #fff;
+    -moz-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -webkit-animation: anim2 ease-in-out 2s infinite alternate;
+    -moz-animation: anim2 ease-in-out 2s infinite alternate;
+}
+@-webkit-keyframes anim2{
+   from {top: 75%;   -webkit-transform: scale(0.8) rotate(0deg)   }
+   to   {top: 77%; -webkit-transform: scale(1) rotate(0deg) }
+}
+@-moz-keyframes anim2{
+   from {top: 75%;   -webkit-transform: scale(0.8) rotate(0deg)   }
+   to   {top: 77%; -webkit-transform: scale(1) rotate(0deg) }
+}
+
+
+@media screen and (max-width: 767px) {
+    .slide-content .sub_heading{
+        letter-spacing: 10px;
+    }
+    .slide-content .heading{
+        font-size: 60px;
+        line-height: 80px;
+    }
+}
+@media screen and (max-width: 580px) {
+    .slide-content .sub_heading{
+        letter-spacing: 5px;
+    }
+    .slide-content .heading{
+        font-size: 40px;
+        line-height: 60px;
+    }
+}
+
+/*---------- Services ---------*/
+.pt-0{
+    padding-top: 0px;
+}
+.pt-10{
+    padding-top: 10px;
+}
+
+.services {
+    position: relative;
+    background: #f9fbfd;
+}
+.servicebox {
+    background: #fff;
+    padding: 50px 35px;
+    border-radius: 10px;
+    -moz-box-shadow: 0px 2px 20px rgba(153, 153, 153, 0.2);
+    -webkit-box-shadow: 0px 2px 20px rgba(153, 153, 153, 0.2);
+    box-shadow: 0px 2px 20px rgba(153, 153, 153, 0.2);
+}
+.servicebox .srv_desc h5{
+    color: #ff5530;
+    font-size: 18px;
+    line-height: 18px;
+    margin-bottom: 40px;
+}
+.servicebox .srv_desc h4{
+    font-family: 'GT Walsheim Medium';
+    font-size: 30px;
+    line-height: 40px;
+    margin-bottom: 15px;
+}
+.servicebox .srv_desc p{
+    font-size: 17px;
+    line-height: 26px;
+}
+.services.bg2{
+    position: relative;
+    background: #380fba;
+}
+.services.bg2 .section-title{
+    color: #fff;
+}
+.services.bg2 .servicebox {
+    background: #300996;
+    -moz-box-shadow: 0px 2px 20px rgba(24, 38, 69, 0.11);
+    -webkit-box-shadow: 0px 2px 20px rgba(24, 38, 69, 0.11);
+    box-shadow: 0px 2px 20px rgba(24, 38, 69, 0.11);
+}
+.services.bg2 .servicebox .srv_desc h4,
+.services.bg2 .servicebox .srv_desc h4 a{
+    color: #fff;
+}
+.services.bg2 .servicebox .srv_desc h4 a:hover{
+    color: #ff5530;
+}
+.services.bg2 .servicebox .srv_desc p{
+    color: #fff;
+}
+@media screen and (max-width: 991px){
+    .services{
+        padding-bottom: 80px;
+    }
+    .servicebox{
+        margin-bottom: 30px;
+    }
+    .servicebox .srv_desc h5{
+        margin-bottom: 30px;
+    }
+    .servicebox .srv_desc h4 {
+        font-size: 28px;
+        line-height: 36px;
+    }
+    .servicebox .srv_desc p{
+        font-size: 16px;
+    }
+
+}
+
+/*---------- About ---------*/
+.about {
+    position: relative;
+}
+.about:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../images/left-layer.png");
+    background-position: left;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    z-index: -9;
+}
+.about:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("../images/right-layer.png");
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    max-width: 200px;
+    height: 100%;
+    z-index: -9;
+}
+.about .box-left{
+    padding-right: 75px;
+}
+.about_img_box img{
+    width: 100%;
+}
+.about_txt_box{
+    margin-bottom: 80px;
+}
+.about_txt_box:last-child{
+    margin-bottom: 0px;
+}
+.about_txt_box i{
+    font-size: 48px;
+}
+.about_txt_box:hover i{
+    color: #ec42cc;
+}
+.about_txt_box h4{
+    font-size: 26px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.about_txt_box p{
+    font-size: 16px;
+    line-height: 26px;
+}
+.about .box-right .about_txt_box{
+    margin-top: 80px;
+}
+.about .box-right .about_txt_box p{
+    margin-bottom: 30px;
+}
+.about .box-right .about_txt_box p:last-child{
+    margin-bottom: 0px;
+}
+@media screen and (max-width: 991px) {
+    .about .box-left{
+        padding-right: 0px;
+    }
+    .about_txt_box{
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .about_txt_box p{
+        font-size: 15px;
+    }
+    .about .box-right .about_txt_box{
+        margin-top: 20px;
+    }
+    .about_img_box {
+        margin-top: 0px;
+        margin-left: 0;
+        margin-bottom: 30px;
+    }
+}
+
+/*--------- Portfolio Section ---------*/
+.works{
+    background: #f9fbfd;
+    padding-bottom: 70px;
+}
+ul#filters {
+    padding: 0;
+    list-style: none;
+    display: block;
+    color: #8d8d8d;
+    margin: 0px auto 20px;
+}
+
+ul#filters li{
+    font-family: 'GT Walsheim Medium';
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.filter {
+  display: inline-block;
+  text-decoration: none;
+  color: #1e2846;
+  font-size: 16px;
+  letter-spacing: 0px;
+  cursor: pointer;
+}
+.filter:hover,.filter.active{
+    color: #8d8d8d;
+}
+#portfoliolist .portfolio {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: none;
+  float: left;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+.portfolio-wrapper {
+    overflow: hidden;
+    position: relative !important;
+}
+.works-img a {
+    display: block;
+}
+.portfolio img {
+    width: 100%;
+}
+
+.portfolio:hover .works-img{
+    -moz-box-shadow: 0px 10px 30px #e5ebf3;
+    -webkit-box-shadow: 0px 10px 30px #e5ebf3;
+    box-shadow: 0px 10px 30px #e5ebf3;
+}
+.works-info{
+    padding: 25px 0px;
+    text-transform: uppercase;
+}
+.works-info .label-text h4{
+    font-size: 14px;
+    line-height: 28px;
+    margin-bottom: 0;
+    letter-spacing: 1px;
+}
+@media screen and (max-width: 991px){
+    ul#filters li{
+        padding: 0px 10px;
+    }
+}
+
+
+/*---------- Blog Page---------*/
+.blog{
+    padding-bottom: 80px;
+}
+.blog_post .post_content{
+    position: relative;
+    padding: 0px 0px 20px 0px;
+}
+.blog_post .post_img{
+    position: relative;
+    overflow: hidden;
+    margin: 0px 0px 25px 0px;
+}
+
+.blog_post .post_img a{
+    display: block;
+}
+.blog_post .post_img img{
+    width: 100%;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+.blog_post:hover .post_img img{
+    opacity: 0.92;
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+}
+
+.blog_post .post_header h2.post_title,
+.blog_post .post_header h2.post_title a{
+    font-size: 26px;
+    line-height: 36px;
+}
+.blog_post .post_header h2{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: -0.5px;
+}
+
+.post_intro{
+    line-height: 26px;
+    letter-spacing: 0.5px;
+}
+.blog_post .read_more{
+    margin-top: 12px;
+}
+.blog_post .read_more a {
+    font-family: 'GT Walsheim Medium';
+    color: #a5aab0;
+    text-transform: uppercase;
+    font-size: 12px;
+    line-height: 30px;
+    letter-spacing: 2px;
+}
+.blog_post .read_more a:hover{
+    color: #ff5530;
+}
+
+@media screen and (max-width: 991px){
+    .blog_post .post_header h2.post_title, 
+    .blog_post .post_header h2.post_title a{
+        font-size: 22px;
+        line-height: 24px;
+    }
+    
+}
+
+
+/*---- Contact Section----*/
+.contact {
+    position: relative;
+    background: url("../images/footer-bg.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.contact:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(11, 0, 39, 0.85);
+    width: 100%;
+    height: 100%;
+}
+.contact.contact_2:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(56, 15, 186, 0.85);
+    width: 100%;
+    height: 100%;
+}
+.contact.contact_2 .contact-info{
+    margin-top: 105px;
+}
+.contact-shape{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+.contact-shape img {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+}
+.contact ::-webkit-input-placeholder { 
+    font-family: 'GT Walsheim Regular';
+    font-size: 14px;
+    color: #fff;
+}
+.contact ::-moz-placeholder { 
+    font-family: 'GT Walsheim Regular';
+    font-size: 14px;
+    color: #fff;
+}
+.contact :-ms-input-placeholder { 
+    font-family: 'GT Walsheim Regular';
+    font-size: 14px;
+    color: #fff;
+}
+.contact :-moz-placeholder { 
+    font-family: 'GT Walsheim Regular';
+    font-size: 14px;
+    color: #fff;
+}
+.contact :placeholder { 
+    font-family: 'GT Walsheim Regular';
+    font-size: 14px;
+    color: #fff;
+}
+.contact-title h3 {
+    color: #fff;
+    margin-bottom: 40px;
+    margin-top: 0;
+}
+.appoint-form-two .form-control {
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    background: none;
+    border-bottom: 1px solid #989898;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-radius: 0;
+    box-shadow: none;
+    outline: none;
+    padding: 0;
+    margin-right: 45px;
+}
+.appoint-form-two .form-control:last-child {
+    margin-right: 0;
+}
+.appoint-form-two .form-group {
+    margin-bottom: 35px;
+}
+.appoint-form-two .form-control-width {
+    width: 100%;
+    margin-bottom: 50px;
+}
+.appoint-form-two .top-social {
+    text-align: right;
+    margin-top: 20px;
+}
+.submit-btn .btn {
+    background: #ff5530;
+    color: #fff;
+    border-radius: 30px;
+    padding: 10px 70px;
+}
+.top-social li  {
+    display: inline-block;
+}
+.top-social li a {
+    color: #fff;
+    margin-right: 40px;
+}
+.top-social li:last-child a {
+    margin-right: 0;
+}
+.list-inline a i:hover{
+    color: #ff5530;
+}
+.contact-info h4 {
+    color: #fff;
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+.contact-info .contact-info-details {
+    color: #fff;
+    margin-bottom: 45px;
+}
+.contact-info-details p {
+    font-size: 16px;
+    letter-spacing: 1px;
+}
+.contact-info-details p a{
+    color: #fff;
+}
+.contact-info-details p a:hover{
+    color: #ff5530;
+}
+.appoint-form .form-control-height {
+    height: 110px;
+    margin-bottom: 3px;
+}
+.appoint-form .btn {
+    font-family: 'GT Walsheim Regular';
+    font-size: 16px;
+    width: 100%;
+    padding: 12px 0;
+    background: #ff5530;
+    text-transform: uppercase;
+    color: #fff;
+    letter-spacing: 2px;
+}
+.submit-btn .btn {
+    float: left;
+    text-transform: uppercase;
+    margin-top: 20px;
+}
+@media only screen and (max-width: 991px) {
+    .contact-info-details p{
+        font-size: 15px;
+    }
+    .appoint-form {
+        width: 100%;
+        padding: 35px;
+    }
+    .contact-info {
+        margin-bottom: 30px;
+    }
+    .contact.contact_2 .contact-info{
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+    .top-social li a {
+        margin-right: 20px;
+    }
+}
+@media only screen and (max-width: 767px) {
+    .appoint-form-two .top-social{
+        text-align: left;
+        margin-top: 50px;
+        margin-bottom: 0px;
+    }
+}
+@media only screen and (max-width: 479px) {
+    .appoint-form-two .top-social {
+        text-align: center;
+        margin-top: 30px;
+    }
+    .submit-btn .btn {
+        float: none;
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+/*-------- Footer Section ------------*/
+.footer .copyright {
+    padding: 40px 0px;
+    font-size: 16px;
+    text-align: center;
+    color: #989898;
+}
+.footer .copyright a{
+    color: #ff5530;
+}
+@media screen and (max-width: 767px){
+    .footer .widget{
+        margin-bottom: 50px;
+    }
+}
+
